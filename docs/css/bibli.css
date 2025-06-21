@@ -1,0 +1,233 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  background: #0d1117; /* fundo preto azulado */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e0e0;
+  line-height: 1.6;                                                                             
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* ========nav bar======== */
+.navbar {
+  background: linear-gradient(45deg, #000000, #0d47a1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 30px;
+  color: #ffffff !important;
+}
+.navbar .nav-link {
+  color: #ffffff !important;
+  margin-left: 20px;
+}
+.navbar .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* ======== titulos ======== */
+h1, h2 {
+  text-align: center;
+  font-weight: 700;
+  color: #90caf9;
+  margin-bottom: 20px;
+}
+
+/* ======== barra pesquisa ======== */
+#pesquisa {
+  max-width: 500px;
+  margin: 20px auto 40px auto;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid #1e3a8a;
+  background-color: #121212;
+  color: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+#pesquisa:focus {
+  border-color: #2196f3;
+  outline: none;
+  box-shadow: 0 0 12px rgba(33, 150, 243, 0.5);
+}
+
+/* ======== grade dos livros  ======== */
+#lista-livros {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 0 20px 40px;
+}
+.livro {
+  width: 100%;
+}
+
+
+/* ======== cards dos livro ======== */
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  background-color: #1c1c1e;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+.card-img-top {
+  height: 280px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #64b5f6;
+}
+.card-text {
+  color: #040505;
+}
+                                                                                                                         
+/* ======== botoes======== */
+.btn {
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.btn-primary {
+  background: #1e3a8a;
+  border: none;
+  color: white;
+}
+.btn-primary:hover {                                                                                                                                                                                                                                                                                                                                                                                                                                      
+  background: #1565c0;
+}
+.btn-success {
+  background: #1565c0;
+  border: none;
+}
+.btn-success:hover {
+  background: #0d47a1;
+}
+
+/* ======== formulario ======== */
+form {
+  max-width: 600px;
+  margin: auto;
+  background-color: #1c1c1e;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+select, textarea, input {
+  margin-bottom: 20px;
+  border-radius: 10px !important;
+  cursor: text;
+  color: #ffffff;
+  border: 1px solid #333;
+}
+label {
+  font-weight: bold;
+  color: #bbdefb;
+}
+
+/* ======== info dos livros ======== */
+.container > img {
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* ======== rodape ======== */
+footer {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  background: linear-gradient(45deg, #000000, #0d47a1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px 0;
+    width: 100%;
+  }
+
+  .navbar .nav-link {
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+  }
+  h1 {
+    font-size: 24px;
+    margin: 15px 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 10px 10px 20px;
+  }
+  #pesquisa {
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px 15px;
+  }
+
+  #lista-livros {
+    grid-template-columns: 1fr;
+    padding: 0 10px 30px;
+  }
+
+  .container > img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  footer {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
